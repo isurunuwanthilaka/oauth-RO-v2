@@ -32,4 +32,19 @@ public class Controller {
 
         return ResponseEntity.badRequest().build();
     }
+
+    @GetMapping("/200")
+    public ResponseEntity code200() {
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/404")
+    public ResponseEntity code404() {
+        return ResponseEntity.status(404).build();
+    }
+
+    @GetMapping("/500")
+    public ResponseEntity code500() {
+        return ResponseEntity.status(500).build();
+    }
 }
